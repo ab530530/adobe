@@ -1,0 +1,53 @@
+@charset "utf-8";
+
+
+.article {
+  max-width: 900px;
+  padding: 2rem 3rem;
+
+}
+
+.article-title {
+  color: #fff;
+}
+
+.article-description {
+  color: #fff;
+}
+
+
+.nav {
+  position: fixed;
+  top: 50%;
+  right: 2rem;
+  margin-top: -117px;
+
+}
+
+.nav-li {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+}
+
+.nav-link {
+  display: block;
+  width: 15px;
+  height: 15px;
+  text-indent: -9999px;
+  background-color: #fff;
+  opacity: .3;
+  transition-duration: .3s;
+}
+
+.nav-link:hover {
+  opacity: 1;
+}
+
+.nav-link-index {
+  background-color: #000;
+}
+
+.nav-link-current {
+  opacity: 1;
+}
