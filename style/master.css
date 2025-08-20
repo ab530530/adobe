@@ -4,15 +4,21 @@
 .article {
   max-width: 900px;
   padding: 2rem 3rem;
-
+  color: #fff;
 }
 
 .article-title {
-  color: #fff;
+
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: capitalize;
 }
 
 .article-description {
-  color: #fff;
+
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
 }
 
 
@@ -50,4 +56,75 @@
 
 .nav-link-current {
   opacity: 1;
+  pointer-events: none;
 }
+
+
+/* -------grid */
+
+.grid {
+  display: grid;
+  /* grid-template-columns: 33.3333%  33.333% 33.333% 33.333%; */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+/* -------------card */
+
+.card {
+  position: relative;
+}
+
+.card-img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+.card-overlay::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: .3;
+}
+
+
+.card-overlay-hover::after {
+  opacity: 0;
+  transition-duration: .3s;
+}
+
+.card-overlay-hover:hover::after {
+  opacity: .3;
+}
+
+.card-icon .card-icon-wrpper {
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.card-icon .card-icon-eye {
+  font-size: 2.5rem;
+}
+
+.card-icon-hover .card-icon-eye{
+  transform: scale(0);
+  transition-duration: .3s;
+}
+
+.card-icon-hover:hover .card-icon-eye{
+  transform: scale(1);
+}
+
